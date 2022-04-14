@@ -7,7 +7,7 @@ eureka:
 resilience4j:
   circuitbreaker:
     instances:
-      circuitFindGenreByGenre:
+      circuitFindSeriesByGenre:
         slidingWindowType: COUNT_BASED
         waitDurationInOpenState: 15000
         automaticTransitionFromOpenToHalfOpenEnabled: true

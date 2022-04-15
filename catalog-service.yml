@@ -7,7 +7,7 @@ eureka:
 resilience4j:
   circuitbreaker:
     instances:
-      circuitFindSeriesByGenre:
+      circuitGetCatalogByGenre:
         slidingWindowType: COUNT_BASED
         waitDurationInOpenState: 15000
         automaticTransitionFromOpenToHalfOpenEnabled: true
@@ -16,3 +16,20 @@ resilience4j:
         slidingWindowSize: 5
         failureRateThreshold: 50
         permittedNumberOfCallsInHalfOpenState: 3
+  retry:
+    instances:
+      circuitGetCatalogByGenre:
+        maxAttempts: 3
+        waitDuration: 1000
+        retryExceptions[0]: feign.FeignException$InternalServerError
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  health:
+    circuitbreakers:
+      enabled: true
+  endpoint:
+    health:
+      show-details: always

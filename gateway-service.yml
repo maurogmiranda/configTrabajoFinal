@@ -2,10 +2,15 @@ spring:
   security:
     oauth2:
       client:
+        provider:
+          google:
+            issuer-uri: https://accounts.google.com
         registration:
           github:
-            client-id: a9da91ae3a0e7ea6230d
-            client-secret: 821296802c08a110391f092f52076c64b6ca0900
+            client-id: 359294979077-mmak495dq42u5a70gvp3gsi7gahkjlhk.apps.googleusercontent.com
+            client-secret: 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
+            scope: openid,profile,email
+            redirect-uri: http://localhost:8080/login/oauth2/code/google
   zipkin:
     base-url: http://localhost:9411/
     enabled: true

@@ -1,4 +1,11 @@
 spring:
+  security:
+    oauth2:
+      client:
+        registration:
+          github:
+            client-id: a9da91ae3a0e7ea6230d
+            client-secret: 821296802c08a110391f092f52076c64b6ca0900
   zipkin:
     base-url: http://localhost:9411/
     enabled: true
@@ -21,6 +28,8 @@ spring:
           uri: lb://series-service
           predicates:
           - Path=/series/**
+      default-filters:
+        - TokenRelay
 server:
   port: ${SERVER_PORT:8080}
 

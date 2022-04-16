@@ -34,7 +34,7 @@ spring:
           predicates:
           - Path=/series/**
       default-filters:
-        - TokenRelay
+        - OIDCTokenRelay
 server:
   port: ${SERVER_PORT:8080}
 

@@ -24,4 +24,4 @@ spring:
     port: 5672
 queue:
   movie:
-    name: PersonaQueue
+    name: MovieQueue

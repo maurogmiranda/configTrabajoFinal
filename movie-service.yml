@@ -17,3 +17,11 @@ spring:
     username: root
     password: root
     driver-class-name: com.mysql.cj.jdbc.Driver
+  rabbitmq:
+    username: guest
+    password: guest
+    host: localhost
+    port: 5672
+queue:
+  movie:
+    name: PersonaQueue

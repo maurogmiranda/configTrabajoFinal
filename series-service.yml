@@ -3,8 +3,8 @@ server:
 eureka:
   client:
     service-url:
-      defaultZone: http://localhost/eureka
-   #  defaultZone: http://service-registry/eureka
+      defaultZone: http://localhost:8761/eureka
+   #  defaultZone: http://service-registry:8761/eureka
 spring:
   #security:
   #  oauth2:

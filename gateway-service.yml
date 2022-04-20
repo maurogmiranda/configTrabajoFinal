@@ -34,8 +34,8 @@ spring:
           uri: lb://series-service
           predicates:
           - Path=/series/**
-      default-filters:
-        - OIDCTokenRelay
+ #     default-filters:
+ #       - OIDCTokenRelay
 server:
   port: ${SERVER_PORT:8080}
 

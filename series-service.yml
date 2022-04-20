@@ -3,7 +3,8 @@ server:
 eureka:
   client:
     service-url:
-      defaultZone: http://service-registry/eureka
+      defaultZone: http://localhost/eureka
+   #  defaultZone: http://service-registry/eureka
 spring:
   #security:
   #  oauth2:
@@ -14,15 +15,17 @@ spring:
     username: guest
     password: guest
     host: localhost
+  # host: rabbitmq
     port: 5672
   zipkin:
     base-url: http://localhost:9411/
+ #  base-url: http://zipkin:9411/
     enabled: true
   application:
     name: series-service
   data:
     mongodb:
-      host: mongoSeries
+      host: localhost
       port: 27017
       database: series
 

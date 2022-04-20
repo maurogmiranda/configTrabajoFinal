@@ -4,6 +4,7 @@ eureka:
   client:
     service-url:
       defaultZone: http://localhost:8761/eureka
+   #  defaultZone: http://service-registry/eureka
 spring:
  # security:
  #   oauth2:
@@ -12,6 +13,7 @@ spring:
  #         issuer-uri: https://accounts.google.com
   zipkin:
     base-url: http://localhost:9411/
+ #  base-url: http://zipkin:9411/
     enabled: true
   jpa:
     deferDatasourceInitialization: true
@@ -19,6 +21,7 @@ spring:
       ddlAuto: create-drop
   datasource:
     url: jdbc:mysql://localhost:3306/parcialservicio1
+#   url: jdbc:mysql://dbMovies:3306/parcialservicio1
     username: root
     password: root
     driver-class-name: com.mysql.cj.jdbc.Driver
@@ -26,6 +29,7 @@ spring:
     username: guest
     password: guest
     host: localhost
+#   host: rabbitmq
     port: 5672
 queue:
   movie:

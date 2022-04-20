@@ -6,15 +6,18 @@ spring:
  #         issuer-uri: https://accounts.google.com
   zipkin:
     base-url: http://localhost:9411/
+ #  base-url: http://zipkin:9411/
     enabled: true
   rabbitmq:
     username: guest
     password: guest
     host: localhost
+#   host: rabbitmq
     port: 5672
   data:
     mongodb:
       host: localhost
+    # host: mongoCatalog
       port: 27017
       database: test
 queue:
@@ -28,6 +31,7 @@ eureka:
   client:
     service-url:
       defaultZone: http://localhost:8761/eureka
+   #  defaultZone: http://service-registry/eureka
 resilience4j:
   circuitbreaker:
     instances:

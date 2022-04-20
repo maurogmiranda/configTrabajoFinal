@@ -22,7 +22,7 @@ spring:
     name: series-service
   data:
     mongodb:
-      host: localhost
+      host: mongoSeries
       port: 27017
       database: series
 
